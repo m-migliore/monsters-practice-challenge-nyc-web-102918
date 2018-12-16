@@ -3,14 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Monstr</title>
+
+    <style media="screen">
+      .monster {
+        margin: 50px 0;
+      }
+
+      #new-monster-name, #new-monster-age, #new-monster-bio {
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
   <body>
     <h1>Monstr Inc.</h1>
-    <div id='create-monster'></div>
+    <div id='create-monster'>
+      <form id="monster-form" action="index.html" method="post">
+        <input type="text" id="new-monster-name" placeholder="Enter Monster Name" value=""><br>
+        <input type="number" id="new-monster-age" placeholder="Enter Monster Age" value=""><br>
+        <textarea id="new-monster-bio" rows="8" cols="80" placeholder="Enter Monster Bio"></textarea><br>
+        <input type="submit" name="submit" value="Create Monster">
+      </form>
+    </div>
     <div id='monster-container'></div>
-    <button id="back"><=</button>
-    <button id="forward">=></button>
-    <!-- <script src='index.js'></script> -->
-    <script src='demo.js'></script>
+    <div id="btn-box">
+      <button id="back"><=</button>
+      <button id="forward">=></button>
+    </div>
+
+    <script src='index.js'></script>
+    <!-- <script src='demo.js'></script>  -->
   </body>
 </html>
